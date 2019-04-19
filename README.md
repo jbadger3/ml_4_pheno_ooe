@@ -31,7 +31,7 @@ Generates features vectors for phenotyping models from electronic health record 
 1.  The main script `extract_OMOP_features.py` must be supplied with an examples file in .csv format that contains person_ids for patients that have an opioid overdose diagnoses on their record and the dx_date where the diagnoses code first appears.
 Headers should be included as 'person_id' and 'dx_date' respectively.  Dates are exptected to be in ISO 8601 format (YYYY-MM-DD). See `supporting_files/examples_sample.csv` for concrete examples.
 
-2.  This work utilized sqlite as the backend database for storing OMOP CDM data.  When using something other than sqlite the code will need to be edited to import the appropraite python DB API and create a connection.  The SQL queries may also need slight adjustments based on differences in SQL syntax.
+2.  This work utilized sqlite as the backend database for storing OMOP CDM data.  When using something other than sqlite the code will need to be edited to import the appropriate python DB API and create a connection.  The SQL queries may also need slight adjustments based on differences in SQL syntax.
 
 3. Run the script from the command line using:
 `python script/extract_OMOP_features.py --db_path path/to/db --examples_path path/to/examples --model_name my_model`
